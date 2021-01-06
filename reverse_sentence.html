@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <p> Napisz funkcję, która przyjmuje ciąg znaków (zdanie) i ciąg znaków z odwróconą kolejnością słów. Przykład: Dla “Ala ma kota” funkcja ma zwrócić “kota ma Ala”.
+    </p>
+    <p> sentence: "Ala ma kota"</p>
+    <p>Click the button to reverse the sentence</p>
+
+    <button onclick="reverseSentence()">Reverse</button>
+
+    <p id="reverseSentence"></p>
+
+    <script>
+    
+    
+    function reverseSentence(sentence){
+        var sentence = "Ala ma kota";
+
+        var reverseSentence = sentence.split(" ").reverse().join(" ");
+        document.getElementById("reverseSentence").innerHTML = reverseSentence;
+    };
+    </script>
+
+</body>
+</html>
