@@ -25,14 +25,19 @@ function game(string1, string2){
 //  Ad. 2
 
 function theLargestOne (variable){
-    var variable = "'" + prompt("Give any sequence of numbers, I will tell you which one is the largest") + "'";
+    var variable = prompt("Give any sequence of numbers, I will tell you which one is the largest");
     var desireNumber = 0
-    for (let x = 0; x < variable.length; x++){ 
-        if (variable[x] > desireNumber){           
-            desireNumber = variable[x];
+    if (/^\d+$/.test(variable)){
+        for (let x = 0; x < variable.length; x++){ 
+            if (variable[x] > desireNumber){           
+                desireNumber = variable[x];
+            }
         }
+        console.log("The largest namber is " + desireNumber);
     }
-    console.log("The largest namber is " + desireNumber);
+    else {
+      alert('Please input numeric characters only');
+    }
 }
 
 theLargestOne();
