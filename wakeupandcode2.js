@@ -41,3 +41,17 @@ function theLargestOne (variable){
 }
 
 theLargestOne();
+
+// Ad. 3
+
+function vowelCounting (word){
+    var word = prompt("Givw word in which you wanna count the vowels");
+    var vowels = 0;
+
+    // if (/^\w\d+$/.test(word)){
+        vowels = word.match(/[aeiou]/gi).length;
+    // }
+    console.log("Number of vowels in this word:", vowels);
+}
+
+vowelCounting();
